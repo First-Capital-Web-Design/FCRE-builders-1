@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  color: grey;
+  color: white;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -170,7 +170,7 @@ header #fh5co-main-nav > ul li {
 }taken-out*/
 header #fh5co-main-nav > ul li a {
   padding-bottom: 5px;
-  color: orange;
+  color: white;
   position: relative;
   font-weight: 300;
   border-bottom: 2px solid transparent;
