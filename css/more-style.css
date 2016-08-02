@@ -120,20 +120,43 @@ div.nav-scroll a:hover{
   margin-left: 12vw;
   height: 500px;
   background: white;
-  box-shadow: 2px 7px 7px rgba(0, 0, 0, .5)
-}
-.project-object + .project-object{
-  margin-top: 30px;
+  box-shadow: 2px 7px 7px rgba(0, 0, 0, .5);
+  overflow: hidden;
+  margin-top: 40px;
 }
 .project-image{
   width: 100%;
   height: 400px;
-  background-color: orange;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .project-object h1{
+  padding: 31px;
+  color: white;
+  background-color: orange;
+}
+.project-info{
+  width: 350px;
+  height: 500px;
+  position: absolute;
+  right: -355px;
+  top: 0;
+  background-color: #444;
   padding: 30px;
+  -webkit-transition: right 1.5s;
+  font-size: 17px;
+  line-height: 23px;
+  color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, .5);
+}
+.project-info-active{
+  right: 0px;
+}
+.project-info a{
+  color: orange;
+}
+.project-info a:hover{
+  color: yellow;
 }
 /**/
 td, th {
