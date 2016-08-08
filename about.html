@@ -87,6 +87,17 @@
 			</div>
 		</header>
 
+		<div class="scroll-navbar">
+
+			<div class="logo-small"></div>
+
+			<a href="about.html" style="color: orange;">About Us</a>
+			<a href="services.html">Services</a>
+			<a href="projects.html">Projects</a>
+			<a href="contact.html">Contact</a>
+
+		</div>
+
 		<a href="about.html"><div class="logo"></div></a>
 
 		<div class="mobile-nav" style="width: 25px; height: 25px; background-image: url('https://www.newfangled.com/wp-content/uploads/2014/08/stuffcontentmgrfiles2ac67e44c30a21635f8a9d498f832bc1cmisc_resized80_313_257_hamenu.png'); background-size: 25px 25px;"></div>
@@ -109,10 +120,10 @@
 	</div>
 </div>
 </div><!-- end fh5co-common-section -->
-<div class="down-arrow" style="position: absolute; top: calc(100vh - 60px); left: calc(50% - 17px); color: white; opacity: .7; width: 34px;"><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></div>
+<div class="down-arrow" style="position: absolute; top: calc(100vh - 60px); left: calc(50% - 17px); color: white; opacity: .7; width: 34px;"><a href="#about-content"><i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a></div>
 
 
-<div id="" style="position: relative; margin-top: 40px; min-height: calc(100vh); height: auto; background: white; padding: 0; width: 74vw; margin-left:13vw;">
+<div id="about-content" style="position: relative; margin-top: 40px; min-height: calc(100vh); height: auto; background: white; padding: 0; width: 74vw; margin-left:13vw;">
 
 		<div class="row" style="background-color: white; box-shadow: 2px 2px 7px rgba(0, 0, 0, .7), 20px 20px 60px rgba(100, 100, 150, .2) inset; padding: 50px; ">
 			<div class="">
@@ -233,17 +244,6 @@
 		</div>
 </div><!-- end fh5co-common-section -->
 
-<div class="logo-small"></div>
-
-<div class="nav-scroll">
-
-	<a href="about.html" style="color: orange;">About Us</a><br>
-	<a href="services.html">Services</a><br>
-	<a href="projects.html">Projects</a><br>
-	<a href="contact.html">Contact</a><br>
-
-</div>
-
 		<div style="background-color: #154b87; height: 40px !important;">
 			<div class="overlay"></div>
 			<div class="container" style="height: 70px !important;">
@@ -347,14 +347,25 @@
     var scroll_pos_test = $(window).height() + 30;             // set to whatever you want it to be
 
     if(y_scroll_pos > scroll_pos_test) {
-        $(".logo-small").css({"position":"fixed","top":"20px"});
-				$(".nav-scroll").css({"position":"fixed","top":"20px"});
+        $(".scroll-navbar").css({"top":"0"});
     }	else
 	{
-		$(".logo-small").css({"position":"absolute","top":"calc(100vh + 50px)"});
-		$(".nav-scroll").css({"position":"absolute","top":"calc(100vh + 50px)"});
-
+		$(".scroll-navbar").css({"top":"-52px"});
 	}
+});
+
+var $root = $('html, body');
+$('a').click(function() {
+		var href = $.attr(this, 'href');
+		$root.animate({
+				scrollTop: $(href).offset().top
+		}, 800, function () {
+			$(".property-icon-content").css("opacity","1");
+			$(".pop-up-background").addClass("pop-up-background-active");
+			if($(this).hasClass("myrtle")){$(".myrtle-beach-property").children(".property-icon-content").css("display", "block");}
+
+		});
+		return false;
 });
 
 	});

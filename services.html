@@ -87,6 +87,17 @@
 			</div>
 		</header>
 
+		<div class="scroll-navbar">
+
+			<div class="logo-small"></div>
+
+			<a href="about.html">About Us</a>
+			<a href="services.html" style="color: orange;">Services</a>
+			<a href="projects.html">Projects</a>
+			<a href="contact.html">Contact</a>
+
+		</div>
+
 		<a href="about.html"><div class="logo"></div></a>
 
 		<div class="mobile-nav" style="width: 25px; height: 25px; background-image: url('https://www.newfangled.com/wp-content/uploads/2014/08/stuffcontentmgrfiles2ac67e44c30a21635f8a9d498f832bc1cmisc_resized80_313_257_hamenu.png'); background-size: 25px 25px;"></div>
@@ -111,7 +122,6 @@
 		</div><!-- end fh5co-common-section -->
 
 
-		<div style="width: calc(74vw + 30px); background-color: ; height: 500px; position: relative; margin-left: calc(13vw - 15px); border: 20px solid rgba(228, 228, 239, 1); box-shadow: 2px 7px 7px rgba(0, 0, 0, .5),2px 2px 7px rgba(0, 0, 0, .5) inset"></div>
 
 		<div id="" style="position: relative; margin-top: 40px; min-height: calc(100vh); height: auto; background: white; padding: 0; width: 74vw; margin-left:13vw;">
 
@@ -172,17 +182,6 @@
 					</div>
 				</div>
 		</div><!-- end fh5co-common-section -->
-
-		<div class="logo-small"></div>
-
-		<div class="nav-scroll">
-
-			<a href="about.html">About Us</a><br>
-			<a href="services.html" style="color: orange;">Services</a><br>
-			<a href="projects.html">Projects</a><br>
-			<a href="contact.html">Contact</a><br>
-
-		</div>
 
 				<div style="background-color: #154b87; height: 40px !important;">
 					<div class="overlay"></div>
@@ -290,13 +289,10 @@
     var scroll_pos_test = $(window).height() + 30;             // set to whatever you want it to be
 
     if(y_scroll_pos > scroll_pos_test) {
-        $(".logo-small").css({"opacity":"1"});
-				$(".nav-scroll").css({"opacity":"1"});
+        $(".scroll-navbar").css({"top":"0"});
     }	else
 	{
-		$(".logo-small").css({"opacity":"0"});
-		$(".nav-scroll").css({"opacity":"0"});
-
+		$(".scroll-navbar").css({"top":"-52px"});
 	}
 });
 
