@@ -81,8 +81,8 @@ div.nav-scroll a:hover{
   top:20px;
   z-index: 5;
 }
-.logo-small{
-  width: 9vw;
+.logo-small-nav{
+  width: 120px;
   height: 60px;
   position: absolute;
   left: 20px;
